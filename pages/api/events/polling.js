@@ -20,8 +20,6 @@ function runMiddleware(req, res, fn) {
   });
 }
 
-const token = "sdlfk345lksdçlrgfkw45lk345";
-
 const events = [
   {
     eventId: "sdf54a6sd4f65asd6f45a6sdf",
@@ -53,9 +51,9 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
-  const { authorization } = req.headers;
+  const { Authorization } = req.headers;
 
-  if (authorization.slice(7) !== token) {
+  if (Authorization.slice(7) !== "sdlfk345lksdçlrgfkw45lk345") {
     return res.status(403).json({
       title: "Unexpected error",
       status: 500,
