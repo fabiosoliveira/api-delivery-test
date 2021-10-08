@@ -51,14 +51,14 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
-  const { Authorization } = req.headers;
+  // const { Authorization } = req.headers;
 
-  if (Authorization.slice(7) !== "sdlfk345lksdçlrgfkw45lk345") {
-    return res.status(403).json({
-      title: "Unexpected error",
-      status: 500,
-    });
-  }
+  // if (Authorization.slice(7) !== "sdlfk345lksdçlrgfkw45lk345") {
+  //   return res.status(403).json({
+  //     title: "Unexpected error",
+  //     status: 500,
+  //   });
+  // }
 
   res.status(200).json(events);
 }
