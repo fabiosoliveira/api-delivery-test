@@ -37,7 +37,7 @@ export default async function handler(req, res) {
   }
 
   const response = {
-    accessToken: "sdlfk345lksdçlrgfkw45lk345",
+    accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIzMDM0Q0UzRi04NTQ4LTMzQjYtRDlCMS02QjBDOEU4REM2QjIiLCJTZXNzaW9uSWQiOiI5YzUwYjY0OS1mZjA2LTQ4ZDMtYjYyNi1hNTU0OTI5ZTk1M2QiLCJpc3MiOiJsb2NhbGhvc3Q6MzMzMyIsImlhdCI6MTYzMzQ0MzkzOCwiZXhwIjoxNjMzNDUxMTM4fQ.JAoK8OP9ZYq1UQeabOlWUXZWcy9lak4l09UQX1Ox-4s",
     tokenType: "bearer",
     expiresIn: 30,
   };
