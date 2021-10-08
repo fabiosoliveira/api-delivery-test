@@ -47,11 +47,12 @@ const events = [
 
 export default async function handler(req, res) {
   await runMiddleware(req, res, cors);
+
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
-  const { authorization, "x-polling-merchants": merchants } = req.headers;
+  const { authorization } = req.headers;
 
   if (authorization.slice(7) !== token) {
     return res.status(403).json({
