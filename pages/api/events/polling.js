@@ -1,4 +1,6 @@
 import Cors from "cors";
+import { v4 as uuidv4 } from 'uuid'
+import faker from 'faker'
 
 // Initializing the cors middleware
 const cors = Cors({
@@ -20,29 +22,17 @@ function runMiddleware(req, res, fn) {
   });
 }
 
-const events = [
-  {
-    eventId: "sdf54a6sd4f65asd6f45a6sdf",
-    eventType: "CANCELLATION_REQUESTED",
-    orderId: "bbb",
-    orderUrl: "http://example.com",
-    createdAt: "2019-08-24T14:15:22Z",
-  },
-  {
-    eventId: "sd4f565a4sdf654as6df456as5d",
-    eventType: "CREATED",
-    orderId: "bbb",
-    orderUrl: "http://example.com",
-    createdAt: "2019-08-24T14:15:22Z",
-  },
-  {
-    eventId: "as56df456a4sd6f45a6sdf465asd6f",
-    eventType: "CONCLUDED",
-    orderId: "bbb",
-    orderUrl: "http://example.com",
-    createdAt: "2019-08-24T14:15:22Z",
-  },
-];
+
+const eventTypes = ["CREATED", "CONFIRMED", "DISPATCHED", "READY_FOR_PICKUP", "PICKUP_AREA_ASSIGNED", "CONCLUDED", "CANCELLATION_REQUESTED", "CANCELLATION_REQUEST_DENIED", "CANCELLED", "ORDER_CANCELLATION_REQUEST"]
+
+const events = Array.from({length: 10}, () => ({
+  eventId: uuidv4(),
+  eventType: faker.helpers.randomize(eventTypes),
+  orderId: "bbb",
+  orderUrl: "https://api-delivery-test.vercel.app/api",
+  createdAt: new Date().toISOString(),
+}))
+
 
 export default async function handler(req, res) {
   await runMiddleware(req, res, cors);
