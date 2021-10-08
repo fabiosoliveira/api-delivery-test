@@ -47,18 +47,13 @@ const events = [
 export default async function handler(req, res) {
   await runMiddleware(req, res, cors);
 
-  if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method Not Allowed" });
+  if (req.method === "GET" && req.query.param === "polling") {
+    return res.status(200).json(events);
   }
 
-  // const { Authorization } = req.headers;
+  if (req.method === "POST" && req.query.param === "acknowledgment") {
+    return res.status(200).send();
+  }
 
-  // if (Authorization.slice(7) !== "sdlfk345lksdçlrgfkw45lk345") {
-  //   return res.status(403).json({
-  //     title: "Unexpected error",
-  //     status: 500,
-  //   });
-  // }
-
-  res.status(200).json(events);
+  return res.status(405).json({ error: "Method Not Allowed" });
 }
