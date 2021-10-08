@@ -21,6 +21,7 @@ function runMiddleware(req, res, fn) {
 }
 
 export default async function handler(req, res) {
+
   await runMiddleware(req, res, cors);
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method Not Allowed" });
@@ -30,7 +31,7 @@ export default async function handler(req, res) {
 
   if (
     clientId !== "123456" ||
-    clientSecret !== 123456 ||
+    +clientSecret !== 123456 ||
     grantType !== "client_credentials"
   ) {
     return res.status(401).json({ error: "Bad credential" });
