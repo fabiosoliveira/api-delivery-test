@@ -33,10 +33,10 @@ const orderDatails = {
     },
     items: [
       {
-        id: '22815773000169-F41D4B93-31A8-4043-A3D6-000005935FEC',
+        id: '22815773000169-732bd31e-77fc-47ee-88ee-a0437f97b198',
         index: 0,
-        name: 'CESTA RECHEADA',
-        externalCode: '640414',
+        name: 'Medium - 2 flavors',
+        externalCode: '22',
         unit: 'UNIT',
         quantity: 1,
         specialInstructions: 'Do not put onions.',
@@ -54,7 +54,7 @@ const orderDatails = {
         },
         options: [
           {
-            id: '22815773000169-F41D4B93-31A8-4043-A3D6-000005935FEC',
+            id: '22815773000169-e5232f14-430c-4a94-8ff6-289d5a16a87a',
             name: '1/2 Pepperoni',
             externalCode: '23',
             unit: 'UNIT',
@@ -70,7 +70,7 @@ const orderDatails = {
             specialInstructions: 'None',
           },
           {
-            id: '22815773000169-F41D4B93-31A8-4043-A3D6-000005935FEC',
+            id: '22815773000169-7e507cab-7235-4f75-a0c2-e955fb2f2048',
             name: '1/2 Mozzarella',
             externalCode: '24',
             unit: 'UNIT',
@@ -91,7 +91,7 @@ const orderDatails = {
     otherFees: [
       {
         name: 'Delivery',
-        type: 'DELIVERY_FEE',
+        type: 'SERVICE_FEE',
         receivedBy: 'MARKETPLACE',
         receiverDocument: '1234',
         price: {
@@ -105,10 +105,12 @@ const orderDatails = {
       {
         value: 0,
         target: 'DELIVERY_FEE',
-        sponsorshipValues: [{
-          name: 'MARKETPLACE',
-          value: 0,
-        }],
+        sponsorshipValues: [
+          {
+            name: 'MARKETPLACE',
+            value: 0,
+          },
+        ],
       },
     ],
     total: {
@@ -136,6 +138,7 @@ const orderDatails = {
         {
           value: 55,
           currency: 'R$',
+          type: 'PENDING',
           method: 'FOOD_VOUCHER',
           methodInfo: 'None',
         },
@@ -153,6 +156,7 @@ const orderDatails = {
     },
     delivery: {
       deliveredBy: 'MERCHANT',
+      estimatedDeliveryDateTime: '2021-05-27T20:45:10.332Z',
       deliveryAddress: {
         country: 'Brazil',
         streetName: 'Gomes de Carvalho Street',
