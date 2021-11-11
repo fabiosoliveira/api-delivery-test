@@ -29,7 +29,7 @@ const events = Array.from({length: 100}, () => ({
   eventId: uuidv4(),
   eventType: faker.helpers.randomize(eventTypes),
   orderId: "bbb",
-  orderUrl: "https://api-delivery-test.vercel.app/api",
+  orderURL: "https://api-delivery-test.vercel.app/api",
   createdAt: new Date().toISOString(),
 }))
 
