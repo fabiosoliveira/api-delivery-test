@@ -105,10 +105,10 @@ const orderDatails = {
       {
         value: 0,
         target: 'DELIVERY_FEE',
-        sponsorshipValues: {
+        sponsorshipValues: [{
           name: 'MARKETPLACE',
           value: 0,
-        },
+        }],
       },
     ],
     total: {
