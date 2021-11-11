@@ -28,7 +28,7 @@ const orderDatails = {
     orderTiming: 'INSTANT',
     preparationStartDateTime: '2021-05-27T19:45:10.332Z',
     merchant: {
-      id: '22815773000169-7fb59cb8-5808-40c8-b967-1b3f20ee39cd',
+      id: '77372173000165-A3B4E439-CA11-42BE-A108-F7A0D25322CC',
       name: 'Plaza Pizza',
     },
     items: [
