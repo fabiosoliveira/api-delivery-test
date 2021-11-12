@@ -33,7 +33,7 @@ const orderDatails = {
     },
     items: [
       {
-        id: '22815773000169-732bd31e-77fc-47ee-88ee-a0437f97b198',
+        id: '22815773000169-B558112F-1D1F-40A5-B7DD-ABC3AC142B6E',
         index: 0,
         name: 'Medium - 2 flavors',
         externalCode: '22',
@@ -54,7 +54,7 @@ const orderDatails = {
         },
         options: [
           {
-            id: '22815773000169-e5232f14-430c-4a94-8ff6-289d5a16a87a',
+            id: '22815773000169-B558112F-1D1F-40A5-B7DD-ABC3AC142B6E',
             name: '1/2 Pepperoni',
             externalCode: '23',
             unit: 'UNIT',
@@ -70,7 +70,7 @@ const orderDatails = {
             specialInstructions: 'None',
           },
           {
-            id: '22815773000169-7e507cab-7235-4f75-a0c2-e955fb2f2048',
+            id: '22815773000169-B558112F-1D1F-40A5-B7DD-ABC3AC142B6E',
             name: '1/2 Mozzarella',
             externalCode: '24',
             unit: 'UNIT',
