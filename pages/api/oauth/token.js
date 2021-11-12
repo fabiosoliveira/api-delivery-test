@@ -31,7 +31,7 @@ export default async function handler(req, res) {
 
   if (
     clientId !== "123456" ||
-    +clientSecret !== 123456 ||
+    clientSecret !== "a secret" ||
     grantType !== "client_credentials"
   ) {
     return res.status(401).json({ error: "Bad credential" });
