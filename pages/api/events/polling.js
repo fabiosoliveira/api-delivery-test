@@ -25,7 +25,7 @@ function runMiddleware(req, res, fn) {
 
 const eventTypes = ["CREATED", "CONFIRMED", "DISPATCHED", "READY_FOR_PICKUP", "PICKUP_AREA_ASSIGNED", "CONCLUDED", "CANCELLATION_REQUESTED", "CANCELLATION_REQUEST_DENIED", "CANCELLED", "ORDER_CANCELLATION_REQUEST"]
 
-const events = Array.from({length: 50000}, () => ({
+const events = Array.from({length: 25000}, () => ({
   eventId: uuidv4(),
   eventType: faker.helpers.randomize(eventTypes),
   orderId: "bbb",
